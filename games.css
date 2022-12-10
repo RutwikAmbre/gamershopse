@@ -1,0 +1,441 @@
+/*
+Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+Click nbfs://nbhost/SystemFileSystem/Templates/ClientSide/css.css to edit this template
+*/
+/* 
+    Created on : 3 Dec 2022, 12:03:21
+    Author     : rambre
+*/
+body{
+    background-image: url('images/web_background.jpg'); /*Background image */
+}
+#logo{                                          /*Logo */
+    height: 40px;
+    width: 150px;
+}
+
+/*Navigation Bar */
+.nav-link{
+    font-size: 20px;
+}
+.nav-item{
+    padding-right: 20px;
+}
+#navdetails{
+    padding-right: 150px;
+    
+}
+#navBtn{
+    color:white;
+    border: 2px solid gray;
+}
+#navBtn:hover{
+    background-color: grey;
+    color:white;
+    font-weight: bold;
+}
+
+/*Search Box*/
+
+#searchbox{
+    width: 250px;
+    margin: auto;
+    border-style: ridge;
+    border:1px solid black;
+}
+
+#searchText,#hometitle,#ip,#city,#country,#org{
+    color: aquamarine;
+    text-align: center;
+    font-family: 'Aldrich';font-size: 20px;
+}
+
+/*Platform buttons */
+#plat{
+    display:block;
+    margin: 0 auto;
+    height: 75px;
+    width: 75px;
+    border: 1px solid white;
+    padding:10px;
+}
+
+#plat:hover{
+    background-color: white;
+    padding: 5px;
+}
+
+/*Table in search webpage */
+#members{
+    margin-left:auto;
+    margin-right:auto;
+    width:65%;
+}
+
+#information:hover{
+    cursor:default;
+}
+
+#tdata,#tname{
+    color:white;
+    font-size: 20px;
+    padding:10px;
+    border: 1px solid white;
+    font-family: 'Montserrat';font-size: 20px;
+}
+
+th{
+    color:cyan;
+    font-size: 20px;
+    padding:10px;
+    border: 1px solid white;
+    font-family: 'Aldrich';font-size: 22px;
+}
+
+#item1,#item2,#item3{
+    padding:20px;
+}
+
+/*Selecting items on a table */
+#feedback {
+      font-size: 1.4em; 
+}
+#information .ui-selecting {
+      background: #FECA40; 
+}  
+#information .ui-selected {
+      background: #F39814; color: white; 
+}
+#information td {
+      margin: 3px; padding: 0.4em; font-size: 1.4em; height: 18px; 
+}
+  
+#carouselExampleIndicators,#carouselExampleIndicators1{
+      border: 3px solid lawngreen;
+}
+  
+ /*Abdul CSS */
+.abdul h1{
+	text-align:center; 
+	color:white;
+	font-size: 70px;
+	font-family: 'Aref Ruqaa', serif;
+}
+
+.abdul h2{
+	text-align:center; 
+	color:white;
+	font-size: 55px;
+	font-family: 'Aref Ruqaa', serif;
+}
+
+.abdul h3{
+	text-align:center; 
+	color:white;
+	font-size: 40px;
+	font-family: 'Aref Ruqaa', serif;
+}
+
+.abdul p{
+	color:white;
+	font-size: 20px;
+	font-weight:bold;
+	text-align: center;
+	font-family: 'Aref Ruqaa', serif;
+	font-family: 'Source Serif Pro', serif;
+}
+
+.abdul img{
+	width: 90px; 
+	height: 95px;
+	box-shadow: #FC0 1px 0 10px;
+}
+
+a.Buy{
+	margin:30px 10px; 
+	width: 150px; 
+	padding: 10px;
+	border-radius: 20px;
+}
+
+a.buy-btt{
+	background-color: black; 
+	color: white;
+	border:solid orange;
+}
+
+ #one a:hover{
+	background-color: orange;
+}
+
+#one{
+	border:double orange;
+	text-align:center; 
+	padding: 7px;
+}
+
+.output {
+    text-align: center; 
+    color: white; 
+    font-size: 20px;
+  }
+  
+ .active1 {
+    margin: 40px;
+    padding: 14px;
+    font-size: 20px;
+    color: white;
+    letter-spacing: 2px;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    background-image: url('images/web_background.jpg');
+    filter: brightness(50%);
+    border-radius: 30px;
+    cursor: pointer;
+  }
+  
+  #targetDiv{
+      color:white;
+      font-size:20px;
+      font-family: 'Aref Ruqaa',serif;
+      font-family: 'Source Serif Pro',serif;
+  }
+  
+  
+  /* Christian Turcu CSS */
+  .about{
+    width: 100%;
+    padding: 100px 0px;
+    background-color: #191919;
+}
+
+.main{
+    width: 1130px;
+    max-width: 95%;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;       
+}
+
+.about-text{
+    width: 550px;
+}
+
+.about img{
+    height: auto;
+    width: 630px;
+    margin-right: 25px;
+}
+
+.about-text a{
+    background-color:#333333;
+    color: greenyellow;
+    text-decoration: none;
+    border: 2px solid transparent;
+    font-weight: bold;
+    padding: 13px 30px;
+    border-radius: 30px;
+    transition: .4s;
+
+}
+
+.about-text h2{
+    color: green;
+    font-size: 55px;
+    font-family: "Times New Roman", Times, serif;
+    font-weight: bold;
+    text-transform: capitalize;
+    margin-bottom: 20px;
+}
+.about-text h5{
+    color: green;
+    letter-spacing: 2px;
+    font-size: 22px;
+    font-family: "Times New Roman", Times, serif;
+    font-weight: bold;
+    margin-bottom: 25px;
+    text-transform: capitalize;
+}
+.about-text p{
+    color: white;
+    letter-spacing: 1px;
+    line-height: 28px;
+    font-size: 18px;
+    margin-bottom: 45px;
+}
+
+.outputx {
+    text-align: center; 
+    color: white; 
+    font-size: 20px;
+  }
+  
+.h1x{
+    text-align:center; 
+    color: greenyellow;
+    font-size: 70px;
+    font-family: "Times New Roman", Times, serif;
+    font-weight: bold;
+}
+
+.h2x{
+    text-align:center; 
+    color: greenyellow;
+}
+
+ .active2x {
+    margin: 40px;
+    padding: 14px;
+    font-size: 25px;
+    color: #00ffff;
+    letter-spacing: 3px;
+    background-image: url('images/web_background.jpg');
+    filter: brightness(45%);
+    border-radius: 50px;
+    cursor: pointer;
+  }
+  
+.media-scroller {
+  --_spacer: var(--size-3);
+  display: grid;
+  gap: var(--_spacer);
+  grid-auto-flow: column;
+  grid-auto-columns: 21%;
+  padding: 0 var(--_spacer) var(--_spacer);
+  overflow-x: auto;
+  overscroll-behavior-inline: contain;
+}
+
+.media-scroller--with-groups {
+  grid-auto-columns: 80%;
+}
+
+
+.media-element {
+  display: grid;
+  grid-template-rows: min-content;
+  gap: var(--_spacer);
+  padding: var(--_spacer);
+  background: var(--surface-2);
+  border-radius: var(--radius-2);
+  box-shadow: var(--shadow-2);
+}
+
+.media-element > img {
+  inline-size: 90%;
+  aspect-ratio: 1 / 0;
+  object-fit: cover;
+}
+
+.flow {
+  display: grid;
+  gap: var(--size-3);
+}
+
+.page-title {
+  font-size: var(--font-size-fluid-3);
+}
+
+.page-subtitle {
+  font-size: var(--font-size-fluid-1);
+}
+
+.title{
+    color: green;
+}
+
+
+.buy-bttx{
+    background-color:#333333;
+    color: greenyellow;
+    font-weight: bold;
+    transition: .4s;
+}
+
+ /*Andrew Cozma CSS */
+.andrew h1{
+	text-align:center; 
+	color:white;
+	font-size: 70px;
+	font-family: 'Aref Ruqaa', serif;
+}
+
+.andrew h2{
+	text-align:center; 
+	color:white;
+	font-size: 55px;
+	font-family: 'Aref Ruqaa', serif;
+}
+
+.andrew h3{
+	text-align:center; 
+	color:white;
+	font-size: 40px;
+	font-family: 'Aref Ruqaa', serif;
+}
+
+.andrew p{
+	color:white;
+	font-size: 20px;
+	font-weight:bold;
+	text-align: center;
+	font-family: 'Aref Ruqaa', serif;
+	font-family: 'Source Serif Pro', serif;
+}
+
+.andrew img{
+	width: 90px; 
+	height: 95px;
+	box-shadow: #6495ED 1px 0 10px;
+}
+
+a.Buy{
+	margin:30px 10px; 
+	width: 150px; 
+	padding: 10px;
+	border-radius: 20px;
+}
+
+a.buy-btt{
+	background-color: black; 
+	color: white;
+	border:solid #6495ED;
+}
+
+ #product a:hover{
+	background-color: #6495ED;
+}
+
+#product{
+	border:double #6495ED;
+	text-align:center; 
+	padding: 7px;
+}
+
+.deta {
+    text-align: center; 
+    color: white; 
+    font-size: 20px;
+  }
+  
+ .apply1 {
+    margin: 40px;
+    padding: 14px;
+    font-size: 20px;
+    color: white;
+    letter-spacing: 2px;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    background-image: url('images/web_background.jpg');
+    filter: brightness(50%);
+    border-radius: 30px;
+    cursor: pointer;
+  }
+  
+  #targetDiv{
+      color:cyan;
+      font-size:20px;
+      font-family: 'Aref Ruqaa',serif;
+      font-family: 'Source Serif Pro',serif;
+  }

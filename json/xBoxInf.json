@@ -1,0 +1,52 @@
+[
+    {
+      "Name": "Call of Duty: Modern Warfare 2",
+      "Price": "€99.99",
+      "Details": "Call of Duty: Modern Warfare II is a 2022 first-person shooter game developed by Infinity Ward and published by Activision. It is a sequel to the 2019 reboot, and serves as the nineteenth installment in the overall Call of Duty series."
+    },
+    {
+      "Name": "TITANFALL 2",
+      "Price": "€29.99",
+      "Details": "At the edge of the Frontier, a Titan and a common footsoldier are unexpectedly thrown together in a desperate attempt to prevent a catastrophic event. Titanfall 2 is about a rifleman, named Jack Cooper, given a Titan, a big giant robot that is there to help or inflict trouble."
+    },
+    {
+      "Name": "Need for Speed Unbound",
+      "Price": "€63.83",
+      "Details": "Need for Speed Unbound is a racing game set in a fictional city called Lakeshore City, which is based on Chicago. Like previous entries in the series, it features an open world environment and gameplay similar to that of previous entries in the series, being mainly focused around street racing."
+    },
+    {
+      "Name": "Battlefield 2042",
+      "Price": "€69.99",
+      "Details": "Battlefield 2042 marks the return to the iconic all-out warfare of the franchise. Adapt and overcome dynamically-changing battlegrounds with the help of your squad and a cutting-edge arsenal. With support for 128 players*, prepare for unprecedented scale on vast environments."
+    },
+    {
+      "Name": "Rust",
+      "Price": "€42.00",
+      "Details": "Rust was initially created as a clone of DayZ, a popular mod for ARMA 2, with crafting elements akin to those in Minecraft. The objective of Rust is to survive in the wilderness using gathered or stolen materials. Players must successfully manage their hunger, thirst, and health, or risk dying."
+    },
+    {
+      "Name": "Far Cry New Dawn",
+      "Price": "€10.29",
+      "Details": "Similar to its predecessors, Far Cry New Dawn is an action-adventure first-person shooter set in an open world environment which the player can explore freely on foot or via various vehicles. The game is set in the fictional Hope County, Montana and uses a reimagined version of Far Cry 5's map."
+    },
+    {
+      "Name": "Assassin's Creed Mirage",
+      "Price": "€52.26",
+      "Details": "Set decades before the events of Assassin's Creed Valhalla, Mirage is a coming-of-age story following Basim Ibn Ishaq (Lee Majdoub), a street thief who will learn to fight for a cause larger than himself by becoming a Hidden One under the tutelage of his mentor Roshan (Shohreh Aghdashloo)."
+    },
+    {
+      "Name": "Dead Rising",
+      "Price": "€19.99",
+      "Details": "The story follows photojournalist Frank West after he becomes trapped in a zombie infested shopping mall. Frank must uncover the mystery behind the outbreak before a rescue helicopter arrives in three days to evacuate him. The game features multiple endings depending on the conditions met by the player."
+    },
+    {
+      "Name": "Ryse Son Of ROME",
+      "Price": "€7.49",
+      "Details": "Ryse: Son of Rome is an action-adventure hack and slash game played in a third-person perspective. Players assume control of Marius Titus, a Roman general who is on a quest to avenge his murdered family. Throughout the game, players gain access to weapons that can be used to assault enemies or defend themselves."
+    },
+    {
+      "Name": "Gears 5",
+      "Price": "€80.00",
+      "Details": "Gears 5 follows the story of Kait Diaz, who is on a journey to find out the origin of the Locust Horde, the main antagonistic faction of the Gears of War series. The Ultimate Edition for Gears 5 was released on September 6, 2019, while the standard edition of the game was released worldwide on September 10, 2019."
+    }  
+  ]

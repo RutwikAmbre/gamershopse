@@ -1,0 +1,47 @@
+[
+    {
+      "Name": "God of War",
+      "Price": "€49.99",
+      "Details": "Kratos and son are finally making their way to PC in a port of the much-loved action hack-and-slash. You'll be able to take on the Norse realms in all the gorgeous 4K, with all the power inside your PC."
+    },
+    {
+      "Name": "Elden Ring",
+      "Price": "€59.99",
+      "Details": "FromSoftware is returning to the Dark Souls formula we're still craving more of, now in an open world with a lore written in part by George R.R. Martin."
+    },
+    {
+      "Name": "Final Fantasy Origin",
+      "Price": "€59.99",
+      "Details": "This is the next Final Fantasy game we're getting before FFXVI. It's actually a pseudo-remake, the original Final Fantasy game from 1987. This one follows Jack and the Warriors of Light, using a mashup of the Final Fantasy 7 remake's team combat with Team Ninja's action-oriented Nioh series fighting"
+    },
+    {
+      "Name": "Dune Spicewars",
+      "Price": "€29.99",
+      "Details": "A sci-fi real-time strategy with 4X elements set in the universe of Frank Herbert's Dune novels. Dune: Spice Wars sees you vie with other factions for control of the desert planet Arrakis, and is developed by the creators of Northgard."
+    },
+    {
+      "Name": "Saints Row Reboot",
+      "Price": "€59.99",
+      "Details": "Volition is rebooting its wacky action series with four new young and witty protagonists. As the new Boss, you and four friends launch a criminal empire in the American southwest-inspired Santo Ileso. The new Saints Row is aiming to be of its own time, a contemporary story about feisty young folks that leaves the old Boss in the past."
+    },
+    {
+      "Name": "Gotham Knights",
+      "Price": "€59.99",
+      "Details": "Four members of the Bat Family are watching over Gotham in Batman's absence in this diversion from the Arkhamverse timeline. In solo or two-player co-op, you'll tackle the big bads of the Court of Owls as Batgirl, Robin, Nightwing, and Red Hood."
+    },
+    {
+      "Name": "Marvels Midnight Suns",
+      "Price": "€59.99",
+      "Details": "Assemble a team from across the Marvel canon to confront a demonic apocalypse. Spider-Man, Captain Marvel, Wolverine, and more face occult forces in this tactical RPG from the devs of XCOM."
+    },
+    {
+      "Name": "Overwatch 2",
+      "Price": "Free to play",
+      "Details": "Blizzard's landmark hero shooter returns as an unconventional free-to-play sequel with a 5v5 format, new heroes, new maps, and an eventual PvE offering."
+    },
+    {
+      "Name": "System Shock",
+      "Price": "€39.99",
+      "Details": "Shodan is coming back in a neon-drenched remake of the classic fps. You'll wake up from a coma onboard the orbital research station and have to take on the hordes of mutants and cyborgs that the killer station-AI has created. System Shock's cyberpunk pedigree is unmatched, and we're hoping this will nail it."
+    }
+  ]

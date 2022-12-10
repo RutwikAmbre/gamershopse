@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>Windows Page</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css"
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <link rel="stylesheet" href="games.css" />
+
+
+
+</head>
+
+<body class="andrew">
+  <nav class="navbar navbar-expand-lg navbar-light bg-secondary">
+    <a class="navbar-brand ml-auto" href="index.html"><img id="logo" src="images/gamershop_logo_white.png" /></a>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul id="navdetails" class="navbar-nav mx-auto">
+        <li class="nav-item">
+          <a id="navBtn" class="nav-link" href="index.html">Home <span class="sr-only">(current)</span></a>
+        </li>
+        <li class="nav-item">
+          <a id="navBtn" class="nav-link" href="searchgame.html">Search</a>
+        </li>
+        <li class="nav-item">
+          <a id="navBtn" class="nav-link" href="#">About Us</a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+  <hr />
+  <h1>Windows/Pc Games</h1>
+  <div class="deta"></div>
+  <script>
+    "use strict";
+
+    const output = document.querySelector(".deta");
+    //console.log(output); // <div class="output"></div>
+
+    //output.textContent = "New Content";
+    //console.log(output); // <div class="output">New content</div>
+
+    // Storing json data in a variable
+    const localJsonFile = "json/Windows_list.json";
+
+    // The DOMContentLoaded event fires when the initial HTML document has been completely loaded and parsed,
+    // without waiting for stylesheets, images, and subframes to finish loading.
+    window.addEventListener("DOMContentLoaded", () => {
+      // console.log('DOM fully loaded and parsed');
+      output.textContent = "Please open this file with localhost";
+      // Make fetch request to local.json file
+      fetch(localJsonFile)
+        .then((response) => response.json()) // and the response we get is in json format
+        .then((data) => {
+          // we call that data here
+          // console.log(data); // check the data on the console
+          output.innerHTML = ""; // Initial content is empty
+          data.forEach((el) => {
+            // loop through the json data using forEach method
+            // console.log(el);
+            jsonList(el); // calling jsonList function
+          });
+        });
+    });
+
+    // Create a function to display the json data dynamically on the webpage
+    function jsonList(products) {
+      // Create a new div element dynamically
+      const div = document.createElement("div");
+      // get the required details from the local.json file to the div element using innerHTML
+      div.innerHTML = `
+       Game Name: ${products.Name}
+        <br>
+       Game Details: ${products.Details}
+        <br>
+       Game Price: ${products.Price}`;
+      // attach the newly created div element to the original div element, in this case to the class '.output'
+      output.append(div);
+      // Add styling to the displayed content
+      div.classList.add("apply1");
+    }
+  </script>
+  <h2> Purchase the Game to Try it Out</h2>
+  <!--List of Games section satrs here-->
+  <section class="products" id="products">
+
+    <div class="row">
+      <div id="product" class="col-sm-4">
+        <img alt="product" src="images/GOWpc.jpeg" onclick="myFunction()">
+        <br>
+        <br>
+        <a class="Buy buy-btt" id="killf" href="#">Buy</a>
+      </div>
+
+
+      <div id="product" class="col-sm-4">
+        <img alt="product" src="images/EldenRingPc.jpeg" onclick="myFunction1()">
+        <br>
+        <br>
+        <a class="Buy buy-btt" id="killf1" href="#">Buy</a>
+      </div>
+
+
+
+      <div id="product" class="col-sm-4">
+        <img alt="product" src="images/FFOpc.png" onclick="myFunction2()">
+        <br>
+        <br>
+        <a class="Buy buy-btt" id="killf2" href="#">Buy</a>
+      </div>
+
+
+      <div id="product" class="col-sm-4">
+        <img alt="product" src="images/DuneSWpc.jpg" onclick="myFunction3()">
+        <br>
+        <br>
+        <a class="Buy buy-btt" id="killf3" href="#">Buy</a>
+      </div>
+
+
+      <div id="product" class="col-sm-4">
+        <img alt="product" src="images/SaintsRowPc.jpeg" onclick="myFunction4()">
+        <br>
+        <br>
+        <a class="Buy buy-btt" id="killf4" href="#">Buy</a>
+      </div>
+
+
+
+      <div id="product" class="col-sm-4">
+        <img alt="product" src="images/GothamKnightsPc.jpeg" onclick="myFunction5()">
+        <br>
+        <br>
+        <a class="Buy buy-btt" id="killf5" href="#">Buy</a>
+      </div>
+
+
+
+      <div id="product" class="col-sm-4">
+        <img alt="product" src="images/MMSpc.jpeg" onclick="myFunction6()">
+        <br>
+        <br>
+        <a class="Buy buy-btt" id="killf6" href="#">Buy</a>
+      </div>
+
+      <div id="product" class="col-sm-4">
+        <img alt="product" src="images/OW2pc.jpg" onclick="myFunction7()">
+        <br>
+        <br>
+        <a class="Buy buy-btt" id="killf7" href="#">Buy</a>
+      </div>
+
+
+      <div id="product" class="col-sm-4">
+        <img alt="product" src="images/SystemShock.jpeg" onclick="myFunction8()">
+        <br>
+        <br>
+        <a class="Buy buy-btt" id="killf8" href="#">Buy</a>
+      </div>
+
+  </section>
+  <script type="text/Javascript">
+		// DOM event for buy buttons
+		document.getElementById("killf").addEventListener("click",function(){
+				alert("Game Purchased Successfully");
+				}); 
+				
+		document.getElementById("killf1").addEventListener("click",function(){
+				alert("Game Purchased Successfully");
+				}); 
+				
+		document.getElementById("killf2").addEventListener("click",function(){
+				alert("Game Purchased Successfully");
+				});
+
+        document.getElementById("killf3").addEventListener("click",function(){
+				alert("Game Purchased Successfully");
+				});
+
+        document.getElementById("killf4").addEventListener("click",function(){
+				alert("Game Purchased Successfully");
+				});
+
+        document.getElementById("killf5").addEventListener("click",function(){
+				alert("Game Purchased Successfully");
+				});
+
+        document.getElementById("killf6").addEventListener("click",function(){
+				alert("Game Purchased Successfully");
+				});
+
+        document.getElementById("killf7").addEventListener("click",function(){
+				alert("Game Purchased Successfully");
+				});
+
+        document.getElementById("killf8").addEventListener("click",function(){
+				alert("Game Purchased Successfully");
+				});
+
+        document.getElementById("demo0").onclick = function() {myFunction()};
+
+</script>
+  <br>
+  <!--Fetches customer support contact details stored on external server using API-->
+  <h3> Contact Windows Support for help </h3>
+  <div id="targetDiv">
+  </div>
+  
+              <footer class="py-3 my-4 ">
+                <ul class="nav justify-content-center pb-3 mb-3">
+                    <li class="nav-item bg-secondary border-top border-bottom border-left border-right">
+                        <a href="index.html" class="nav-link">Home</a>
+                    </li>
+                     <li class="nav-item bg-secondary border-top border-bottom border-left border-right">
+                        <a href="searchgame.html" class="nav-link">Search</a>
+                    </li>
+                    
+                </ul>
+            </footer>
+</body>
+
+</html>
