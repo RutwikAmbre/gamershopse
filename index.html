@@ -3,6 +3,16 @@
 Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
 Click nbfs://nbhost/SystemFileSystem/Templates/Other/html.html to edit this template
 -->
+<!--
+Author : Rutwik Ambre
+Student Number : 20225431
+References : https://stackoverflow.com/questions/30378116/access-json-data-from-different-server-domain-using-ajax
+             https://api.jquery.com/jquery.ajax/
+             https://getbootstrap.com/docs/4.0/components/navbar/
+             https://stackoverflow.com/questions/4937517/ip-to-location-using-javascript
+    Developed in Apache Netbeans IDE 15
+-->
+             
 <html>
     <head>
         <title>Home Page</title>
@@ -34,6 +44,7 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Other/html.html to edit this temp
                 type: 'GET',
                 dataType: 'json'
                 
+                //API to get IP first and put the IP in the 
                 }).done(function(json){
                     $("#ip").text("Your IP address : "+json.ip);
                     var ip = (json.ip);
@@ -162,19 +173,7 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Other/html.html to edit this temp
             
 
         </div>
-        <!--
-            <footer class="py-3 my-4 ">
-                <ul class="nav justify-content-center pb-3 mb-3">
-                    <li class="nav-item bg-secondary border-top border-bottom border-left border-right">
-                        <a href="index.html" class="nav-link">Home</a>
-                    </li>
-                     <li class="nav-item bg-secondary border-top border-bottom border-left border-right">
-                        <a href="searchgame.html" class="nav-link">Search</a>
-                    </li>
-                    
-                </ul>
-            </footer>
-            -->
+
             
     </body>
 </html>

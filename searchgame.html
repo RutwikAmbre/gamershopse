@@ -7,6 +7,16 @@ Click nbfs://nbhost/SystemFileSystem/Templates/ClientSide/html.html to edit this
 Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
 Click nbfs://nbhost/SystemFileSystem/Templates/Other/html.html to edit this template
 -->
+
+<!--
+Author : Rutwik Ambre
+Student Number : 20225431
+References : https://stackoverflow.com/questions/54538535/filter-only-a-specific-column-in-jquery-filter
+             https://jqueryui.com/selectable/
+             https://www.w3schools.com/jquery/ajax_getjson.asp
+
+Developed in Apache Netbeans IDE 15
+-->
 <html>
     <head>
         <title>Search games</title>
@@ -19,7 +29,7 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Other/html.html to edit this temp
         
         <script>
         
-        
+            //Accessing all the local json files and running the function
             $(document).ready(function(){
             var json_files = ["json/local.json","json/xBoxInf.json","json/Windows_list.json"];
             for(var i = 0;i<json_files.length;i++){
@@ -38,6 +48,8 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Other/html.html to edit this temp
               });
               
             });
+            
+            //Selecting items on the page
             $(function(){
                 $("#information").selectable({
                     selected: function (event, ui) {
@@ -54,6 +66,7 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Other/html.html to edit this temp
             });
           });
            
+           //function to load all the data from local json files to the table
           function loadData(files)
           
           {
@@ -118,7 +131,7 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Other/html.html to edit this temp
        </div>
         
         
-    <table id="members">
+    <table id="members">            <!-- Table which will store all the games data -->
         
         <thead>
         <tr>
@@ -133,7 +146,6 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Other/html.html to edit this temp
         
     </table>
         
-        <p id="nofilter"></p>
         
             <footer class="py-3 my-4 ">
                 <ul class="nav justify-content-center pb-3 mb-3">
