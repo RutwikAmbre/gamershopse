@@ -26,7 +26,7 @@ x21522279
     <!--- Navigation Bar is being created -->
     <body>
         <nav class="navbar navbar-expand-lg navbar-light bg-secondary">
-          <a class="navbar-brand ml-auto" href="#"><img id="logo" src="gamershop_logo_white.png"/></a>
+          <a class="navbar-brand ml-auto" href="#"><img id="logo" src="images/gamershop_logo_white.png"/></a>
           <div class="collapse navbar-collapse" id="navbarNav">
             <ul id="navdetails" class="navbar-nav mx-auto">
               <li class="nav-item">
@@ -61,7 +61,7 @@ x21522279
             const output = document.querySelector(".outputx");
 
             // Storing the data in the variables "JSON".
-            const xBoxInfFile = "xBoxInf.json";
+            const xBoxInfFile = "json/xBoxInf.json";
 
             // The "DOMContentLoaded" event will be ready to go when the HTML document has been completely loaded and parsed.
             window.addEventListener("DOMContentLoaded", () => {
@@ -101,53 +101,53 @@ x21522279
             <h2 class="h2x">XBOX ONE GAMES</h2>
             <div class="media-scroller snaps-inline">
               <div class="media-element">
-                <img src="xboxMW2.png" alt="">
+                <img src="images/xboxMW2.png" alt="">
                 <p class="title">Call of Duty: Modern Warfare 2</p>
                 <a class="Buy buy-bttx" id="game1" href="#">Buy the Game</a>
               </div>
               <div class="media-element">
-                <img src="xboxTF2.png" alt="">
+                <img src="images/xboxTF2.png" alt="">
                 <p class="title">TITANFALL 2</p>
                 <a class="Buy buy-bttx" id="game2" href="#">Buy the Game</a>
               </div>
               <div class="media-element">
-                <img src="xboxNFSU.png" alt="">
+                <img src="images/xboxNFSU.png" alt="">
                 <p class="title">Need for Speed Unbound</p>
                 <a class="Buy buy-bttx" id="game3" href="#">Buy the Game</a>
               </div>
               <div class="media-element">
-                <img src="xboxBF2042.png" alt="">
+                <img src="images/xboxBF2042.png" alt="">
                 <p class="title">Battlefield 2042</p>
                 <a class="Buy buy-bttx" id="game4" href="#">Buy the Game</a>
               </div>
               <div class="media-element">
-                <img src="xboxR.png" alt="">
+                <img src="images/xboxR.png" alt="">
                 <p class="title">Rust</p>
                 <a class="Buy buy-bttx" id="game5" href="#">Buy the Game</a>
               </div>
               <div class="media-element">
-                <img src="xboxFCND.png" alt="">
+                <img src="images/xboxFCND.png" alt="">
                 <p class="title">Far Cry New Dawn</p>
                 <a class="Buy buy-bttx" id="game6" href="#">Buy the Game</a>
               </div>
               <div class="media-element">
-                <img src="xboxAG.png" alt="">
+                <img src="images/xboxAG.png" alt="">
                 <p class="title">Assassin's Creed Mirage</p>
                 <a class="Buy buy-bttx" id="game7" href="#">Buy the Game</a>
               </div>
               <div class="media-element">
-                <img src="xboxDR2.png" alt="">
+                <img src="images/xboxDR2.png" alt="">
                 <p class="title">Dead Rising</p>
                 <a class="Buy buy-bttx" id="game8" href="#">Buy the Game</a>
                 <br>
               </div>
               <div class="media-element">
-                <img src="xboxSOR.png" alt="">
+                <img src="images/xboxSOR.png" alt="">
                 <p class="title">Ryse Son Of ROME</p>
                 <a class="Buy buy-bttx" id="game9" href="#">Buy the Game</a>
               </div>
               <div class="media-element">
-                <img src="xboxGOW.png" alt="">
+                <img src="images/xboxGOW.png" alt="">
                 <p class="title">Gears 5</p>
                 <a class="Buy buy-bttx" id="game10" href="#">Buy the Game</a>
               </div>
@@ -211,23 +211,7 @@ x21522279
         </script>
         <br>
         <br>
-        <!-- Displaying User Bank details-->
-        <button type="button" onclick="bankDetails('https://bankDetails.json/api')">Display your Bank Details</button>
-        <script>
-            const bankDetails = 'https://bankDetails.json/api';
-            async function getbankDetails() {
-            var div = "<div>";
-            var bankDetails = fetch;
-            var data = bankDetails.json();
 
-            div += "<div>User Card Number: " + data["results"][0]["CardNum"] + "</div>";
-            div += "<div>User Name: " + data["results"][0]["Name"] + "</div>";
-            div += "<div>User Date of Expiry: " + data["results"][0]["dateOfExpiry"] + "</div>";
-            div += "<div>User Vin Number: " + data["results"][0]["VinNum"] + "</div>";
-            div += "</div>";
 
-            document.getElementById("bankDiv").innerHTML = div;
-          }
-        </script>
     </body>
 </html>
