@@ -1,12 +1,4 @@
 <!DOCTYPE html>
-<!--
-Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
-Click nbfs://nbhost/SystemFileSystem/Templates/ClientSide/html.html to edit this template
--->
-<!--
-Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
-Click nbfs://nbhost/SystemFileSystem/Templates/Other/html.html to edit this template
--->
 
 <!--
 Author : Rutwik Ambre
@@ -70,28 +62,28 @@ Developed in Apache Netbeans IDE 15
           function loadData(files)
           
           {
-            var testTargetElement = document.getElementById("information");
+            var listTargetElement = document.getElementById("information");
 
 
             for(var iCount = 0;iCount < files.length;iCount++){
                 var row = document.createElement("tr");
 
-                var PsElementName = document.createElement("td");
-                PsElementName.id = "tname";
-                PsElementName.innerHTML = files[iCount].Name;
-                row.appendChild(PsElementName);
+                var gameListName = document.createElement("td");
+                gameListName.id = "tname";
+                gameListName.innerHTML = files[iCount].Name;
+                row.appendChild(gameListName);
 
-                var PsElementPrice = document.createElement("td");
-                PsElementPrice.id = "tdata";
-                PsElementPrice.innerHTML = files[iCount].Price;
-                row.appendChild(PsElementPrice);
+                var gameListPrice = document.createElement("td");
+                gameListPrice.id = "tdata";
+                gameListPrice.innerHTML = files[iCount].Price;
+                row.appendChild(gameListPrice);
 
-                var PsElementDesc = document.createElement("td");
-                PsElementDesc.id = "tdata";
-                PsElementDesc.innerHTML = files[iCount].Details;
-                row.appendChild(PsElementDesc);
+                var gameListDesc = document.createElement("td");
+                gameListDesc.id = "tdata";
+                gameListDesc.innerHTML = files[iCount].Details;
+                row.appendChild(gameListDesc);
 
-                testTargetElement.appendChild(row); 
+                listTargetElement.appendChild(row); 
             
         }
        }
