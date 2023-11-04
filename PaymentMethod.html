@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+        <title>Payment Form</title>
+        <link rel="stylesheet" href="../style.css">
+        <meta charset="UTF-8">
+		<!--- Bootstraped to make website responsive --->
+		<script>
+			
+			function validateform(){
+                  var a;
+				  var b;
+				  var c;
+                  a = document.getElementById("text1").value;
+                  b = document.getElementById("number1").value;
+                  c = document.getElementById("number2").value;
+                  if (a == "" || b =="" || c == ""){
+                      alert("Looks like you missed some information, please Enter the details carefully");
+                      return false;
+                  }
+                  else{
+                        alert("Thank you for submitting the Donation");
+                  }
+
+              }
+		
+		
+		</script>
+
+    </head>
+        <body>
+            <div class = "container" id = "payMethod">			<!---Makin a title Class + Givving classes for cv, card number, card name and inputs for the values in VAR when implemented --->
+                <h1 class = "titleC1">Confirm Your Payment</h1>
+                <div class = "first-row">
+                    <div class = "owner">
+                        <h3>Card Name</h3>
+                        <div class = "input-field">
+                            <input type = "text" id = "text1">
+                        </div>
+                    </div>
+                    <div class = "cvv">
+                        <h3>CVV</h3>
+                        <div class = "input-field">
+                            <input type = "password" id = "number1">
+                        </div>
+                    </div>
+                </div>
+                <div class = "second-row">
+                    <div class = "card-number">
+                        <h3>Card Number</h3>
+                        <div class = "input-field">
+                            <input type = "number" id = "number2">
+                        </div>
+                    </div>
+                </div>
+                <div class = "third-row"> 
+                        <div class = "selection">
+                            <div id = "date">
+							<h3>Date Expired</h3>
+                                <select name = "months" id = "months"> <!--- Select: when you click it should display a list form JAN - DEC --->
+                                    <option value = "Jan">Jan</option>
+                                    <option value = "Feb">Feb</option>
+                                    <option value = "Mar">Mar</option>
+                                    <option value = "Apr">Apr</option>
+                                    <option value = "May">May</option>
+                                    <option value = "Jun">Jun</option>
+                                    <option value = "Jul">Jul</option>
+                                    <option value = "Aug">Aug</option>
+                                    <option value = "Sep">Sep</option>
+                                    <option value = "Oct">Oct</option>
+                                    <option value = "Nov">Nov</option>
+                                    <option value = "Dec">Dec</option>
+                                </select>
+                                <select name="years" id="years"> <!--- Select: when you click it should display a list form 2020 - 2028 --->
+                                    <option value = "2028">2021</option>
+                                    <option value = "2027">2022</option>
+                                    <option value = "2026">2023</option>
+                                    <option value = "2025">2024</option>
+                                    <option value = "2024">2025</option>
+                                    <option value = "2023">2026</option>
+                                    <option value = "2022">2027</option>
+                                    <option value = "2021">2028</option>
+                                    <option value = "2020">2029</option>
+                                </select>
+                            </div>
+								<div class = "third-row">
+									<div class = "select">
+										<div class = "method">
+											<h4>Payment Method<h4>
+											<select name = "Select payment Method" id = "method"> <!--- Select: when you click it should display a list form VISA - PAYPAL --->
+												<option value = "select">---Select---</option>
+												<option value = "VISA">VISA</option>
+												<option value = "MASTERCARD">MASTERCARD</option>
+												<option value = "PAYPAL">PAYPAL</option>
+											</select>
+										</div>
+									</div>
+								</div>
+                        </div>
+                </div>
+                <a class = "confirmation" href="../JavaScriptGame/test.html" onclick = "return validateform();">Confirm</a> <!--- confiramtion button that will bring you to a game to win a prize. --->
+			</div>
+				
+        </body>
+</html>
