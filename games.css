@@ -439,3 +439,89 @@ a.buy-btt{
       font-family: 'Aref Ruqaa',serif;
       font-family: 'Source Serif Pro',serif;
   }
+
+/*------------------------------------------------------------------------------------*/
+/*--------------------------------Christian Turcu------------------------------------
+--------------------------------Payment Method Page---------------------------------
+------------------------------------------------------------------------------------*/
+
+/* Text of the fonts is changed */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+  }
+  /* This is the border of the box in payment method */
+  #payMethod{
+    width: 750px;
+    height: 500px;
+    border: 3px solid;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    padding: 40px;
+    justify-content:space-around;
+  }
+  /* resisized the Select box */
+  #method{
+    width: 185px;
+    padding-bottom: -200px;
+  }
+  /* titles have been align to centre */
+  .titleC1{
+    text-align: center;
+  }
+  /*displays the text and titles in felx position */
+  .first-row{
+     display: flex;
+  }
+  /*card name and cv name splited */
+  .owner{
+    width: 100%;
+    margin-right: 40px;
+  }
+  /*puts border for the  text pages and select boxes*/
+  .input-field{
+    border: 1px solid #999;
+  }
+  /* change the border size*/
+  .input-field input{
+    width: 100%;
+    border:none;
+    outline: none;
+    padding: 10px;
+  }
+  /*Positones the date expired and payment method */
+  .selection{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  /* pushing it together */
+  .selection select{
+    padding: 10px 20px;
+  }
+  /* cofirmation button styling */
+  .confirmation{
+    background-color: blueviolet;
+    color: white;
+    text-align: center;
+    text-transform: uppercase;
+    text-decoration: none;
+    padding: 10px;
+    font-size: 18px;
+    transition: 0.5s;
+  }
+  /* color of the backgroung button when hover*/
+  .confirmation:hover{
+    background-color: rgb(5, 41, 78);
+  }
+  /* cahnge the width of image*/
+  .cards img{
+    width: 100px;
+  }
+  /*---------------------------------------------------------------------------------*/
+  /*----------------------------------Christian Turcu---------------------------------
+  --------------------------------Payment Method CSS End------------------------------
+  ------------------------------------------------------------------------------------*/
