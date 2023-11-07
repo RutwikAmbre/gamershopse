@@ -525,3 +525,65 @@ a.buy-btt{
   /*----------------------------------Christian Turcu---------------------------------
   --------------------------------Payment Method CSS End------------------------------
   ------------------------------------------------------------------------------------*/
+  
+  /* Login page CSS */
+#loginBody{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 100vh;
+	margin: 0;
+	background-color: #f5f5f5;
+}
+
+#login-box {
+	background-color: #fff;
+	border: 1px solid #ccc;
+	padding: 20px;
+	border-radius: 5px;
+	box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+#login-title {
+	text-align: center;
+}
+
+#email-label {
+	display: block;
+	margin-bottom: 10px;
+}
+
+#email-input,
+#password-input {
+	width: 100%;
+	padding: 10px;
+	margin-bottom: 20px;
+	border: 1px solid #ccc;
+	border-radius: 3px;
+}
+
+#login-button {
+	background-color: #007bff;
+	color: #fff;
+	padding: 10px 20px;
+	border: none;
+	border-radius: 3px;
+	cursor: pointer;
+}
+
+#login-button:hover {
+	background-color: #0056b3;
+}
+
+#back-to-home-button {
+	background-color: #ccc;
+	color: #000;
+	padding: 10px 20px;
+	border: none;
+	border-radius: 3px;
+	cursor: pointer;
+}
+
+#back-to-home-button:hover {
+	background-color: #999;
+}
