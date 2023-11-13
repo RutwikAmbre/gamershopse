@@ -51,6 +51,20 @@
 			#signup-button:hover {
 			  background-color: #0056b3;
 			}
+            
+            #age-label {
+            display: block;
+            margin-bottom: 10px;
+        }
+
+        #age-input {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 20px;
+            border: 1px solid #ccc;
+            border-radius: 3px;
+        }
+
 
 
     </style>
@@ -67,6 +81,9 @@
 		
 		<label for="password" id="password-label">Password:</label>
 		<input type="password" id="password-input" name="password" required>
+              
+        <label for="age" id="age-label">Age:</label>
+		<input type="number" id="age-input" name="age" required>
 		
 		<button type="submit" id="signup-button">Sign Up</button>
 	  </form>

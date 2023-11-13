@@ -12,17 +12,11 @@ class DataBase
 
     // Rest of the class remains unchanged
 
-
     public function __construct()
     {
         $this->connect = null;
         $this->data = null;
         $this->sql = null;
-        $dbc = new DataBaseConfig();
-        $this->servername = $dbc->servername;
-        $this->username = $dbc->username;
-        $this->password = $dbc->password;
-        $this->databasename = $dbc->databasename;
     }
 
     function dbConnect()
@@ -54,16 +48,15 @@ class DataBase
         return $login;
     }
 
-    function signUp($table, $name, $age, $allergies, $email, $password)
+    function signUp($table, $name, $age, $email, $password)
     {
         $name = $this->prepareData($name);
         $age = $this->prepareData($age);
-        $allergies = $this->prepareData($allergies);
         $email = $this->prepareData($email);
         $password = $this->prepareData($password);
         $password = password_hash($password, PASSWORD_DEFAULT);
         $this->sql =
-            "INSERT INTO " . $table . " (name, age, allergies, email, password) VALUES ('" . $name . "','" . $age . "','" . $allergies . "','" . $email . "','" . $password . "')";
+            "INSERT INTO " . $table . " (name, age, email, password) VALUES ('" . $name . "','" . $age . "','" . $email . "','" . $password . "')";
         if (mysqli_query($this->connect, $this->sql)) {
             return true;
         } else return false;
@@ -82,7 +75,6 @@ class DataBase
         }
     }
 
-
     // This method will be used to retrieve the user's profile based on their email
     function forgotPass($table, $email, $newPassword)
     {
@@ -97,7 +89,8 @@ class DataBase
         }
     }
 
-    function Fooditem($table, $foodId){
+    function Fooditem($table, $foodId)
+    {
         $foodId = $this->prepareData($foodId);
         $this->sql = "select foodName, ingredients, energy, fat, saturates, carbohydrates, sugars, fibre, protein, salt  from " . $table . " where foodId = '" . $foodId . "'";
         $result = mysqli_query($this->connect, $this->sql);
@@ -108,8 +101,5 @@ class DataBase
             return false;
         }
     }
-
-
 }
-
 ?>
