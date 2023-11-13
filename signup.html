@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Sign Up</title>
+    <link rel="stylesheet" type="text/css" href="games.css"/>
+    <style>
+			#signup-container {
+			  width: 300px;
+			  margin: 0 auto;
+			  padding: 20px;
+			  border: 1px solid #ccc;
+			  border-radius: 5px;
+			  background-color: #fff;
+			  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+			}
+
+			/* Style for Form Header (Title) */
+			#signup-header {
+			  text-align: center;
+			  font-size: 24px;
+			  margin-bottom: 20px;
+			}
+
+			/* Style for Form Fields and Labels */
+			#name-label,
+			#email-label,
+			#password-label {
+			  display: block;
+			  font-weight: bold;
+			}
+
+			#name-input,
+			#email-input,
+			#password-input {
+			  width: 100%;
+			  padding: 10px;
+			  border: 1px solid #ccc;
+			  border-radius: 3px;
+			}
+
+			/* Style for Submit Button */
+			#signup-button {
+			  background-color: #007bff;
+			  color: #fff;
+			  padding: 10px 20px;
+			  border: none;
+			  border-radius: 3px;
+			  cursor: pointer;
+			}
+
+			#signup-button:hover {
+			  background-color: #0056b3;
+			}
+
+
+    </style>
+</head>
+	<body id="loginBody">
+	<div id="signup-container">
+	  <h1 id="signup-header">Sign Up</h1>
+	  <form action="signup.php" method="post">
+		<label for="name" id="name-label">Name:</label>
+		<input type="text" id="name-input" name="name" required>
+		
+		<label for="email" id="email-label">Email:</label>
+		<input type="email" id="email-input" name="email" required>
+		
+		<label for="password" id="password-label">Password:</label>
+		<input type="password" id="password-input" name="password" required>
+		
+		<button type="submit" id="signup-button">Sign Up</button>
+	  </form>
+	</div>
+
+
+	</body>
+</html>
