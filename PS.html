@@ -1,10 +1,6 @@
 <!DOCTYPE html>
 <!--
-Author : Abdul Nafey
-Student Number : 21116261
-References : https://dev.to/sasigit7/displaying-content-on-the-webpage-using-a-local-json-file-2mpb
-
-Developed in Apache Netbeans IDE 15
+Author : Adam Marik
 -->
 <html lang="en">
 
@@ -12,12 +8,18 @@ Developed in Apache Netbeans IDE 15
   <title>PlayStation Page</title>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css"
-    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-  <link rel="stylesheet" href="games.css" />
-
-
-
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <link rel="stylesheet" href="games.css"/>
+            
+  <link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet'>
+  <link href='https://fonts.googleapis.com/css?family=Aldrich' rel='stylesheet'>
+  <script>
+     $(document).ready(function(){
+         $("body").hide();
+         $("body").fadeIn(2000);
+                
+     });
+   </script>
 </head>
 
 <body class="abdul">
@@ -85,6 +87,10 @@ Developed in Apache Netbeans IDE 15
       // Add styling to the displayed content
       div.classList.add("active1");
     }
+          
+           function storeGameId(GameID) {
+            localStorage.setItem('selectedGameId', GameID);
+        }
   </script>
   <h2> Purchase the Game to Try it Out</h2>
   <!--List of Games section satrs here-->
@@ -98,7 +104,7 @@ Developed in Apache Netbeans IDE 15
         <a class="Buy buy-btt" id="killf" href="#">Buy</a>
       </div>
 
-
+		</div>
       <div id="one" class="col-sm-4">
         <img alt="product" src="images/cod.jpg" onclick="myFunction1()">
         <br>
@@ -168,48 +174,57 @@ Developed in Apache Netbeans IDE 15
   <script type="text/Javascript">
 		// DOM event for buy buttons
         document.getElementById("killf").addEventListener("click",function(){
-          window.location.href = "PaymentMethod.html";
-            alert("Game Purchased Successfully");
+                sessionStorage.setItem("selectedGameId",20);
+          window.location.href = "processingMethod.html";
+            alert("To buy Need for | Fifa 23 | game we will re direct you to Payment page");
             }); 
 				
         document.getElementById("killf1").addEventListener("click",function(){
-          window.location.href = "PaymentMethod.html";
-            alert("Game Purchased Successfully");
+                sessionStorage.setItem("selectedGameId",21);
+          window.location.href = "processingMethod.html";
+            alert("To buy Need for | Call of Duty Modern Warfare 2 | game we will re direct you to Payment page");
             }); 
 				
         document.getElementById("killf2").addEventListener("click",function(){
-          window.location.href = "PaymentMethod.html";
-            alert("Game Purchased Successfully");
+                sessionStorage.setItem("selectedGameId",22);
+          window.location.href = "processingMethod.html";
+            alert("To buy Need for | God Of War Rangnarok | game we will re direct you to Payment page");
             });
 
         document.getElementById("killf3").addEventListener("click",function(){
-          window.location.href = "PaymentMethod.html";
-            alert("Game Purchased Successfully");
+                sessionStorage.setItem("selectedGameId",23);
+          window.location.href = "processingMethod.html";
+            alert("To buy Need for | Need for Speed Unbound | game we will re direct you to Payment page");
             });
 
         document.getElementById("killf4").addEventListener("click",function(){
-          window.location.href = "PaymentMethod.html";
-            alert("Game Purchased Successfully");
+                sessionStorage.setItem("selectedGameId",24);
+          window.location.href = "processingMethod.html";
+            alert("To buy Need for | Gran Turismo 7 | game we will re direct you to Payment page");
             });
 
         document.getElementById("killf5").addEventListener("click",function(){
-          window.location.href = "PaymentMethod.html";
-            alert("Game Purchased Successfully");
+                sessionStorage.setItem("selectedGameId",25);
+          window.location.href = "processingMethod.html";
+            alert("To buy Need for | Dirt 5 | game we will re direct you to Payment page");
             });
 
         document.getElementById("killf6").addEventListener("click",function(){
-          window.location.href = "PaymentMethod.html";
-            alert("Game Purchased Successfully");
+                sessionStorage.setItem("selectedGameId",26);
+          window.location.href = "processingMethod.html";
+            alert("To buy Need for | Darq | game we will re direct you to Payment page");
             });
 
         document.getElementById("killf7").addEventListener("click",function(){
-          window.location.href = "PaymentMethod.html";
-            alert("Game Purchased Successfully");
+                sessionStorage.setItem("selectedGameId",27);
+          window.location.href = "processingMethod.html";
+            alert("To buy Need for | Dying Light 2 | game we will re direct you to Payment page");
             });
 
         document.getElementById("killf8").addEventListener("click",function(){
-          window.location.href = "PaymentMethod.html";
-            alert("Game Purchased Successfully");
+                sessionStorage.setItem("selectedGameId",28);
+          window.location.href = "processingMethod.html";
+            alert("To buy Need for | Returnal | game we will re direct you to Payment page");
             });
 
         document.getElementById("demo0").onclick = function() {myFunction()};
@@ -236,18 +251,6 @@ Developed in Apache Netbeans IDE 15
       document.getElementById("targetDiv").innerHTML = div;
     }
   </script>
-  
-            <footer class="py-3 my-4 ">
-                <ul class="nav justify-content-center pb-3 mb-3">
-                    <li class="nav-item bg-secondary border-top border-bottom border-left border-right">
-                        <a href="index.html" class="nav-link">Home</a>
-                    </li>
-                     <li class="nav-item bg-secondary border-top border-bottom border-left border-right">
-                        <a href="searchgame.html" class="nav-link">Search</a>
-                    </li>
-                    
-                </ul>
-            </footer>
 </body>
 
 </html>

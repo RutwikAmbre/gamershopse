@@ -1,3 +1,6 @@
+<?php
+session_start();
+?>
 <!DOCTYPE html>
 <!--
 Author : Rutwik Ambre
@@ -69,34 +72,35 @@ References : https://stackoverflow.com/questions/30378116/access-json-data-from-
         
     </head>
     <body>
-       <nav class="navbar navbar-expand-lg navbar-light bg-secondary">
-    <a class="navbar-brand" href="#"><img id="logo" src="images/gamershop_logo_white.png"/></a>
-    <div class="container">
-        <div class="collapse navbar-collapse" id="navbarNav">
+        <nav class="navbar navbar-light bg-secondary">     <!--Navbar-->
+          <a class="navbar-brand ml-auto" href="#"><img id="logo" src="images/gamershop_logo_white.png"/></a>
+          <div class="collapse navbar-collapse" id="navbarNav">
             <ul id="navdetails" class="navbar-nav mx-auto">
-                <li class="nav-item">
-                    <a id="navBtn" class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
-                </li>
-                <li class="nav-item">
-                    <a id="navBtn" class="nav-link" href="searchgame.html">Search</a>
-                </li>
+              <li class="nav-item">
+                <a id="navBtn" class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+              </li>
+              <li class="nav-item">
+                <a id="navBtn" class="nav-link" href="searchgame.html">Search</a>
+              </li>
+                    <li class="nav-item">
+					<a id="loginBtn" class="nav-link" href="login.html">Login</a>
+				</li>
             </ul>
-
-            <ul class="navbar-nav ml-auto"> <!-- Use ml-auto to push "Login" to the very right -->
-                <li class="nav-item">
-                    <a id="navBtn" class="nav-link" href="login.html">Login</a>
-                </li>
-            </ul>
-        </div>
-    </div>
-</nav>
-
-
-
+          </div>
+        </nav>
         
         
         <br>
         
+          <?php
+                if (isset($_SESSION['user_email'])) {
+                    // If the user is logged in, display welcome message
+                    echo '<h2 id="hometitle">WELCOME TO GAMERSHOP, ' . $_SESSION['user_email'] . '</h2>';
+                } else {
+                    // If not logged in, display default welcome message
+                    echo '<h2 id="hometitle">WELCOME TO GAMERSHOP</h2>';
+                }
+   		 ?>
         
         <div class="container-fluid">
             <div class="row">

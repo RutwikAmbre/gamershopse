@@ -2,7 +2,9 @@
 <!--
 Author : Christian Turcu
 Student number : 21522279
-References : https://codepen.io/kevinpowell/pen/ExbKBQa
+
+Developed in Apache Netbeans IDE 15
+-->
 -->
 <html>
     <head>
@@ -96,10 +98,13 @@ References : https://codepen.io/kevinpowell/pen/ExbKBQa
               // displaying the content
               div.classList.add("active2x");
             }
+                
+                function storeGameId(GameID) {
+            sessionStorage.setItem('selectedGameId', GameID);
+        }
         </script>
         <section>
             <!-- construction a scroller for the user to search for games -->
-            <h2 class="h2x">XBOX ONE GAMES</h2>
             <div class="media-scroller snaps-inline">
               <div class="media-element">
                 <img src="images/xboxMW2.png" alt="">
@@ -157,64 +162,63 @@ References : https://codepen.io/kevinpowell/pen/ExbKBQa
         <!-- When user buys a specific by reading the getElementById game it displays Alert message -->
         <script type="text/Javascript">
             // DOM event for buy buttons
-            document.getElementById("game1").addEventListener("click",function(){
-              window.location.href = "PaymentMethod.html";
-                alert("Thank you for purchasing the game.");
-                alert("Your Receipt is [| Duty: Modern Warfare 2 |].");
-            }); 
-
+            document.getElementById("game1").addEventListener("click", function () {
+                sessionStorage.setItem("selectedGameId",1);
+                window.location.href = "processingMethod.html";
+                alert("To buy | Call of Duty: Modern Warfare 2 | game we will redirect you to the Payment page");
+             });
             document.getElementById("game2").addEventListener("click",function(){
-              window.location.href = "PaymentMethod.html";
-                alert("Thank you for purchasing the game.");
-                alert("Your Receipt is [| TITANFALL 2 |].");
+              sessionStorage.setItem("selectedGameId",2);
+              window.location.href = "processingMethod.html";
+                alert("To buy | TITANFALL 2 | game we will re direct you to Payment page");
             }); 
 
             document.getElementById("game3").addEventListener("click",function(){
-              window.location.href = "PaymentMethod.html";
-                alert("Thank you for purchasing the game.");
-                alert("Your Receipt is [| Need for Speed Unbound |].");
+                    sessionStorage.setItem("selectedGameId",3);
+              window.location.href = "processingMethod.html";
+                alert("To buy Need for | Speed Unbound | game we will re direct you to Payment page");
             });
 
             document.getElementById("game4").addEventListener("click",function(){
-              window.location.href = "PaymentMethod.html";
-                alert("Thank you for purchasing the game.");
-                alert("Your Receipt [| Battlefield 2042 |].");
+                    sessionStorage.setItem("selectedGameId",4);
+              window.location.href = "processingMethod.html";
+                alert("To buy Need for | Battlefield 2042 | game we will re direct you to Payment page");
             });
 
             document.getElementById("game5").addEventListener("click",function(){
-              window.location.href = "PaymentMethod.html";
-                alert("Thank you for purchasing the game.");
-                alert("Your Receipt is [| Rust |].");
+                    sessionStorage.setItem("selectedGameId",5);
+              window.location.href = "processingMethod.html";
+                alert("To buy Need for | | Rust | | game we will re direct you to Payment page");
             });
 
             document.getElementById("game6").addEventListener("click",function(){
-              window.location.href = "PaymentMethod.html";
-                alert("Thank you for purchasing the game.");
-                alert("Your Receipt is [| Far Cry New Dawn |].");
+                    sessionStorage.setItem("selectedGameId",6);
+              window.location.href = "processingMethod.html";
+                alert("To buy Need for | Far Cry New Dawn | game we will re direct you to Payment page");
             });
 
             document.getElementById("game7").addEventListener("click",function(){
-              window.location.href = "PaymentMethod.html";
-                alert("Thank you for purchasing the game.");
-                alert("Your Receipt is [| Assassin's Creed Mirage |].");
+                    sessionStorage.setItem("selectedGameId",7);
+              window.location.href = "processingMethod.html";
+                alert("To buy Need for | Assassin's Creed Mirage | game we will re direct you to Payment page");
             });
 
             document.getElementById("game8").addEventListener("click",function(){
+                    sessionStorage.setItem("selectedGameId",8);
               window.location.href = "PaymentMethod.html";
-                alert("Thank you for purchasing the game.");
-                alert("Your Receipt is [| Dead Rising |].");
+                alert("To buy Need for | Dead Rising | game we will re direct you to Payment page");
             });
 
             document.getElementById("game9").addEventListener("click",function(){
-              window.location.href = "PaymentMethod.html";
-                alert("Thank you for purchasing the game.");
-                alert("Your Receipt is [| Ryse Son Of ROME |].");
+                    sessionStorage.setItem("selectedGameId",9);
+              window.location.href = "processingMethod.html";
+                alert("To buy Need for | Ryse Son Of ROME | game we will re direct you to Payment page");
             });
             
             document.getElementById("game10").addEventListener("click",function(){
-              window.location.href = "PaymentMethod.html";
-                alert("Thank you for purchasing the game.");
-                alert("Your Receipt is [| Gears 5 |].");
+                    sessionStorage.setItem("selectedGameId",10);
+              window.location.href = "processingMethod.html";
+               alert("To buy Need for | Gears 5 | game we will re direct you to Payment page");
             });
 
             document.getElementById("demo0").onclick = function() {myFunction()};

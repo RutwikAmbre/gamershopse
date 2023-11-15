@@ -7,7 +7,7 @@ References : https://getbootstrap.com/docs/4.0/components/navbar/
              
 Developed in Apache Netbeans IDE 15
 -->
-<html lang="en">
+<html>
 
 <head>
   <title>Windows Page</title>
@@ -16,7 +16,13 @@ Developed in Apache Netbeans IDE 15
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css"
     integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
   <link rel="stylesheet" href="games.css" />
-
+<script>
+            $(document).ready(function(){
+                $("body").hide();
+                $("body").fadeIn(2000);
+                
+            });
+        </script>
 
 
 </head>
@@ -89,6 +95,9 @@ Developed in Apache Netbeans IDE 15
       // Add styling to the displayed content
       div.classList.add("apply1");
     }
+           function storeGameId(GameID) {
+            localStorage.setItem('selectedGameId', GameID);
+        }
   </script>
   <h2> Purchase the Game to Try it Out</h2>
   <!--List of Games section satrs here-->
@@ -101,8 +110,8 @@ Developed in Apache Netbeans IDE 15
         <br>
         <a class="Buy buy-btt" id="killf" href="#">Buy</a>
       </div>
-
-
+	  </div>
+	
       <div id="product" class="col-sm-4">
         <img alt="product" src="images/EldenRingPc.jpeg" onclick="myFunction1()">
         <br>
@@ -169,73 +178,67 @@ Developed in Apache Netbeans IDE 15
       </div>
 
   </section>
-  <script type="text/Javascript">
-		// DOM event for buy buttons
-        document.getElementById("killf").addEventListener("click",function(){
-          window.location.href = "PaymentMethod.html";
-            alert("Game Purchased Successfully");
-            }); 
-            
-        document.getElementById("killf1").addEventListener("click",function(){
-          window.location.href = "PaymentMethod.html";
-            alert("Game Purchased Successfully");
-            }); 
-            
-        document.getElementById("killf2").addEventListener("click",function(){
-          window.location.href = "PaymentMethod.html";
-            alert("Game Purchased Successfully");
-            });
+  <script type="text/javascript">
+  // DOM event for buy buttons
+  document.getElementById("killf").addEventListener("click", function () {
+    sessionStorage.setItem("selectedGameId", 11);
+    window.location.href = "processingMethod.html";
+    alert("To buy | God of War | game we will redirect you to the Payment page");
+  });
 
-        document.getElementById("killf3").addEventListener("click",function(){
-          window.location.href = "PaymentMethod.html";
-            alert("Game Purchased Successfully");
-            });
+  document.getElementById("killf1").addEventListener("click", function () {
+    sessionStorage.setItem("selectedGameId", 12);
+    alert("To buy | Elden Ring | game we will redirect you to the Payment page");
+    window.location.href = "processingMethod.html";
+  });
 
-        document.getElementById("killf4").addEventListener("click",function(){
-          window.location.href = "PaymentMethod.html";
-            alert("Game Purchased Successfully");
-            });
+  document.getElementById("killf2").addEventListener("click", function () {
+    sessionStorage.setItem("selectedGameId", 13);
+    window.location.href = "processingMethod.html";
+    alert("To buy | Final Fantasy Origin | game we will redirect you to the Payment page");
+  });
 
-        document.getElementById("killf5").addEventListener("click",function(){
-          window.location.href = "PaymentMethod.html";
-            alert("Game Purchased Successfully");
-            });
+  document.getElementById("killf3").addEventListener("click", function () {
+    sessionStorage.setItem("selectedGameId", 14);
+    alert("To buy | Dune Spicewars | game we will redirect you to the Payment page");
+    window.location.href = "processingMethod.html";
+  });
 
-        document.getElementById("killf6").addEventListener("click",function(){
-          window.location.href = "PaymentMethod.html";
-            alert("Game Purchased Successfully");
-            });
+  document.getElementById("killf4").addEventListener("click", function () {
+    sessionStorage.setItem("selectedGameId", 15);
+    alert("To buy | Saints Row Reboot | game we will redirect you to the Payment page");
+    window.location.href = "processingMethod.html";
+  });
 
-        document.getElementById("killf7").addEventListener("click",function(){
-          window.location.href = "PaymentMethod.html";
-            alert("Game Purchased Successfully");
-            });
+  document.getElementById("killf5").addEventListener("click", function () {
+    sessionStorage.setItem("selectedGameId", 16);
+    alert("To buy | Gotham Knights | game we will redirect you to the Payment page");
+    window.location.href = "processingMethod.html";
+  });
 
-        document.getElementById("killf8").addEventListener("click",function(){
-          window.location.href = "PaymentMethod.html";
-            alert("Game Purchased Successfully");
-            });
+  document.getElementById("killf6").addEventListener("click", function () {
+    sessionStorage.setItem("selectedGameId", 17);
+    alert("To buy | Marvels Midnight Suns | game we will redirect you to the Payment page");
+    window.location.href = "processingMethod.html";
+  });
 
-        document.getElementById("demo0").onclick = function() {myFunction()};
+  document.getElementById("killf7").addEventListener("click", function () {
+    sessionStorage.setItem("selectedGameId", 18);
+    alert("To buy | Overwatch 2 | game we will redirect you to the Payment page");
+    window.location.href = "processingMethod.html";
+  });
 
+  document.getElementById("killf8").addEventListener("click", function () {
+    sessionStorage.setItem("selectedGameId", 19);
+    alert("To buy | System Shock | game we will redirect you to the Payment page");
+    window.location.href = "processingMethod.html";
+  });
 </script>
-  <br>
+  <br/>
   <!--Fetches customer support contact details stored on external server using API-->
   <h3> Contact Windows Support for help </h3>
   <div id="targetDiv">
   </div>
-  
-              <footer class="py-3 my-4 ">
-                <ul class="nav justify-content-center pb-3 mb-3">
-                    <li class="nav-item bg-secondary border-top border-bottom border-left border-right">
-                        <a href="index.html" class="nav-link">Home</a>
-                    </li>
-                     <li class="nav-item bg-secondary border-top border-bottom border-left border-right">
-                        <a href="searchgame.html" class="nav-link">Search</a>
-                    </li>
-                    
-                </ul>
-            </footer>
 </body>
 
 </html>

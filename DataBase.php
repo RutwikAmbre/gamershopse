@@ -11,6 +11,7 @@ class DataBase
     protected $port = 3306; // AWARDSPACE database port
 
     // Rest of the class remains unchanged
+	// auth Adam Marik
 
     public function __construct()
     {
@@ -27,40 +28,49 @@ class DataBase
 
     function prepareData($data)
     {
-        return mysqli_real_escape_string($this->connect, stripslashes(htmlspecialchars($data)));
+        if ($data === null) {
+        return null;
+    }
+    return mysqli_real_escape_string($this->connect, stripslashes(htmlspecialchars($data)));
     }
 
     function logIn($table, $email, $password)
-    {
-        $email = $this->prepareData($email);
-        $password = $this->prepareData($password);
-        $this->sql = "select * from " . $table . " where email = '" . $email . "'";
-        $result = mysqli_query($this->connect, $this->sql);
-        $row = mysqli_fetch_assoc($result);
-        if (mysqli_num_rows($result) != 0) {
-            $dbemail = $row['email'];
-            $dbpassword = $row['password'];
-            if ($dbemail == $email && password_verify($password, $dbpassword)) {
-                $login = true;
+        {
+            $email = $this->prepareData($email);
+            $password = $this->prepareData($password);
+            $hashedPassword = hash('sha256', $password); // Hashing entered password
+
+            $this->sql = "select * from " . $table . " where email = '" . $email . "'";
+            $result = mysqli_query($this->connect, $this->sql);
+            $row = mysqli_fetch_assoc($result);
+
+            if (mysqli_num_rows($result) != 0) {
+                $dbemail = $row['email'];
+                $dbpassword = $row['password'];
+
+                // Hashing the entered password and comparing it with the stored hashed password
+                if ($dbemail == $email && $dbpassword == $hashedPassword) {
+                    $login = true;
+                } else $login = false;
             } else $login = false;
-        } else $login = false;
 
-        return $login;
-    }
-
+            return $login;
+        }
+        
     function signUp($table, $name, $age, $email, $password)
-    {
-        $name = $this->prepareData($name);
-        $age = $this->prepareData($age);
-        $email = $this->prepareData($email);
-        $password = $this->prepareData($password);
-        $password = password_hash($password, PASSWORD_DEFAULT);
-        $this->sql =
-            "INSERT INTO " . $table . " (name, age, email, password) VALUES ('" . $name . "','" . $age . "','" . $email . "','" . $password . "')";
-        if (mysqli_query($this->connect, $this->sql)) {
-            return true;
-        } else return false;
-    }
+        {
+            $name = $this->prepareData($name);
+            $age = $this->prepareData($age);
+            $email = $this->prepareData($email);
+            $password = $this->prepareData($password);
+            $password = hash('sha256', $password); // Hashing with SHA-256
+            $this->sql =
+                "INSERT INTO " . $table . " (name, age, email, password) VALUES ('" . $name . "','" . $age . "','" . $email . "','" . $password . "')";
+            if (mysqli_query($this->connect, $this->sql)) {
+                return true;
+            } else return false;
+        }
+
 
     function profile($table, $email)
     {
@@ -85,21 +95,21 @@ class DataBase
         if (mysqli_query($this->connect, $this->sql)) {
             return true;
         } else {
-            return false;
+                return false;
         }
     }
+        
+       function updateStockCount($table, $selectedGameId)
+{
+    $this->sql = "UPDATE Stocks SET StockCount = StockCount - 1 WHERE GameID = '" . $this->prepareData($selectedGameId) . "'";
 
-    function Fooditem($table, $foodId)
-    {
-        $foodId = $this->prepareData($foodId);
-        $this->sql = "select foodName, ingredients, energy, fat, saturates, carbohydrates, sugars, fibre, protein, salt  from " . $table . " where foodId = '" . $foodId . "'";
-        $result = mysqli_query($this->connect, $this->sql);
-        $row = mysqli_fetch_assoc($result);
-        if (mysqli_num_rows($result) != 0) {
-            return $row;
-        } else {
-            return false;
-        }
+    if (mysqli_query($this->connect, $this->sql)) {
+        return true;
+    } else {
+        return false;
     }
+}
+
+
 }
 ?>

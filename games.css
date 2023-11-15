@@ -4,7 +4,7 @@ Click nbfs://nbhost/SystemFileSystem/Templates/ClientSide/css.css to edit this t
 */
 /* 
     Created on : 3 Dec 2022, 12:03:21
-    Author     : rambre
+    Author     : r_ambre
 */
 body{
     background-image: url('images/web_background.jpg'); /*Background image */
@@ -14,26 +14,39 @@ body{
     width: 150px;
 }
 
-/*Navigation Bar */
-.nav-link{
+
+/* Navigation Bar */
+.nav-link {
     font-size: 20px;
 }
-.nav-item{
-    padding-right: 20px;
+
+.nav-item {
+    padding-right: 350px;
 }
-#navdetails{
-    padding-right: 150px;
-    
+
+#navdetails {
+    margin-right: auto; /* This will push Home and Search to the left */
 }
-#navBtn{
-    color:white;
+
+#navBtn {
+    color: white;
     border: 2px solid gray;
 }
-#navBtn:hover{
+
+#navBtn:hover {
     background-color: grey;
-    color:white;
+    color: white;
     font-weight: bold;
 }
+
+.navbar-brand img {
+    max-height: 50px; /* Set the maximum height for the logo */
+}
+
+
+
+
+
 
 /*Search Box*/
 
@@ -115,72 +128,71 @@ th{
 }
   
  /*Abdul CSS */
-.abdul h1{
-	text-align:center; 
-	color:white;
-	font-size: 70px;
-	font-family: 'Aref Ruqaa', serif;
+.abdul h1 {
+    text-align: center;
+    color: white;
+    font-size: 70px;
+    font-family: 'Aref Ruqaa', serif;
 }
 
-.abdul h2{
-	text-align:center; 
-	color:white;
-	font-size: 55px;
-	font-family: 'Aref Ruqaa', serif;
+.abdul h2 {
+    text-align: center;
+    color: white;
+    font-size: 55px;
+    font-family: 'Aref Ruqaa', serif;
 }
 
-.abdul h3{
-	text-align:center; 
-	color:white;
-	font-size: 40px;
-	font-family: 'Aref Ruqaa', serif;
+.abdul h3 {
+    text-align: center;
+    color: white;
+    font-size: 40px;
+    font-family: 'Aref Ruqaa', serif;
 }
 
-.abdul p{
-	color:white;
-	font-size: 20px;
-	font-weight:bold;
-	text-align: center;
-	font-family: 'Aref Ruqaa', serif;
-	font-family: 'Source Serif Pro', serif;
+.abdul p {
+    color: white;
+    font-size: 20px;
+    font-weight: bold;
+    text-align: center;
+    font-family: 'Aref Ruqaa', serif, 'Source Serif Pro', serif;
 }
 
-.abdul img{
-	width: 90px; 
-	height: 95px;
-	box-shadow: #FC0 1px 0 10px;
+.abdul img {
+    width: 90px;
+    height: 95px;
+    box-shadow: #FC0 1px 0 10px;
 }
 
-a.Buy{
-	margin:30px 10px; 
-	width: 150px; 
-	padding: 10px;
-	border-radius: 20px;
+a.Buy {
+    margin: 30px 10px;
+    width: 150px;
+    padding: 10px;
+    border-radius: 20px;
 }
 
-a.buy-btt{
-	background-color: black; 
-	color: white;
-	border:solid orange;
+a.buy-btt {
+    background-color: black;
+    color: white;
+    border: solid orange;
 }
 
- #one a:hover{
-	background-color: orange;
+#one a:hover {
+    background-color: orange;
 }
 
-#one{
-	border:double orange;
-	text-align:center; 
-	padding: 7px;
+#one {
+    border: double orange;
+    text-align: center;
+    padding: 7px;
 }
 
 .output {
-    text-align: center; 
-    color: white; 
+    text-align: center;
+    color: white;
     font-size: 20px;
-  }
-  
- .active1 {
+}
+
+.active1 {
     margin: 40px;
     padding: 14px;
     font-size: 20px;
@@ -192,14 +204,13 @@ a.buy-btt{
     filter: brightness(50%);
     border-radius: 30px;
     cursor: pointer;
-  }
-  
-  #targetDiv{
-      color:white;
-      font-size:20px;
-      font-family: 'Aref Ruqaa',serif;
-      font-family: 'Source Serif Pro',serif;
-  }
+}
+
+#targetDiv {
+    color: white;
+    font-size: 20px;
+    font-family: 'Aref Ruqaa', serif, 'Source Serif Pro', serif;
+}
   
   
   /* Christian Turcu CSS */
@@ -444,25 +455,15 @@ a.buy-btt{
 /*--------------------------------Christian Turcu------------------------------------
 --------------------------------Payment Method Page---------------------------------
 ------------------------------------------------------------------------------------*/
-/* Text of the fonts is changed */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-weight: bold;
-  font-family: 'Poppins', sans-serif;
-}
-
-/* Body styles to center the form */
-#bodyPayM {
+.bodyPM {
   display: flex;
-  justify-content: center;
   align-items: center;
+  justify-content: center;
   height: 100vh;
+  margin: 0;
 }
 
-/* This is the border of the box in payment method */
-#payMethod {
+#infoMethod {
   width: 750px;
   height: 500px;
   border: 3px solid;
@@ -471,35 +472,41 @@ a.buy-btt{
   flex-direction: column;
   padding: 40px;
   justify-content: space-around;
+  margin-top: 20px; /* Added margin-top */
 }
 
-/* resisized the Select box */
-#method {
-  width: 185px;
+/* Resized the Select boxes */
+#method,
+#months,
+#years {
+  width: 100%; /* Changed width to 100% */
+  padding: 10px; /* Added padding */
+  margin-top: 10px; /* Added margin-top */
 }
 
-/* titles have been align to centre */
+/* Titles have been aligned to center */
 .titleC1 {
   text-align: center;
 }
 
-/* displays the text and titles in felx position */
+/* Displays the text and titles in flex position */
 .first-row {
   display: flex;
+  flex-wrap: wrap; /* Added flex-wrap */
 }
 
-/* card name and cv name splited */
+/* Card name and CV name split */
 .owner {
-  width: 100%;
+  width: calc(50% - 20px); /* Adjusted width */
   margin-right: 40px;
 }
 
-/* puts border for the text pages and select boxes */
+/* Puts border for the text pages and select boxes */
 .input-field {
   border: 1px solid #999;
 }
 
-/* change the border size */
+/* Change the border size */
 .input-field input {
   width: 100%;
   border: none;
@@ -507,20 +514,22 @@ a.buy-btt{
   padding: 10px;
 }
 
-/* Positones the date expired and payment method */
+/* Positions the date expired and payment method */
 .selection {
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
 
-/* pushing it together */
+/* Pushing it together */
 .selection select,
 .method select {
+  width: 48%; /* Adjusted width */
   padding: 10px 20px;
+  margin-top: 10px; /* Added margin-top */
 }
 
-/* cofirmation button styling */
+/* Confirmation button styling */
 .confirmation {
   background-color: rgb(43, 41, 44);
   color: rgb(224, 224, 224);
@@ -533,13 +542,10 @@ a.buy-btt{
   display: flex;
   justify-content: center;
   align-items: center;
-
-
-
-/* change the width of image */
-.cards img {
-  width: 100px;
 }
+
+
+
   /*---------------------------------------------------------------------------------*/
   /*----------------------------------Christian Turcu---------------------------------
   --------------------------------Payment Method CSS End------------------------------
