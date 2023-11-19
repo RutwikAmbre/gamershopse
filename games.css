@@ -127,7 +127,8 @@ th{
       border: 3px solid lawngreen;
 }
   
- /*Abdul CSS */
+
+/*Abdul CSS */
 .abdul h1 {
     text-align: center;
     color: white;
@@ -163,36 +164,43 @@ th{
     box-shadow: #FC0 1px 0 10px;
 }
 
-a.Buy {
+.abdul a.Buy {
     margin: 30px 10px;
     width: 150px;
     padding: 10px;
     border-radius: 20px;
 }
 
-a.buy-btt {
+.abdul a.buy-btt {
     background-color: black;
     color: white;
     border: solid orange;
+    display: block;
+    width: 150px;
+    padding: 10px;
+    border-radius: 20px;
+    margin: 10px auto;
 }
 
-#one a:hover {
+.abdul #one a:hover {
     background-color: orange;
 }
 
-#one {
+.abdul #one {
     border: double orange;
     text-align: center;
     padding: 7px;
+    margin: 10px;
+    display: inline-block;
 }
 
-.output {
+.abdul .output {
     text-align: center;
     color: white;
     font-size: 20px;
 }
 
-.active1 {
+.abdul .active1 {
     margin: 40px;
     padding: 14px;
     font-size: 20px;
@@ -206,11 +214,21 @@ a.buy-btt {
     cursor: pointer;
 }
 
-#targetDiv {
+.abdul #targetDiv {
     color: white;
     font-size: 20px;
     font-family: 'Aref Ruqaa', serif, 'Source Serif Pro', serif;
 }
+
+/* Clearfix for proper alignment */
+.abdul .row::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+
+
+
   
   
   /* Christian Turcu CSS */

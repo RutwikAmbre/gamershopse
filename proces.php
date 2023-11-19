@@ -26,11 +26,6 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $expirationMonth = isset($_POST['months']) ? $_POST['months'] : '';
     $expirationYear = isset($_POST['years']) ? $_POST['years'] : '';
     $cardMethod = isset($_POST['method']) ? $_POST['method'] : '';
-	
-    echo "Received name: $holderName";
-    echo "Received pincode: $pinCode";
-    echo "Received number: $holdersNumber";
-    echo "Received expiry year: $expirationYear";
         
     // Generate a random initialization vector (IV)
     $iv = openssl_random_pseudo_bytes(openssl_cipher_iv_length('aes-256-cbc'));
@@ -59,11 +54,10 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                   VALUES ('$hName', '$hNum', '$pCode', '$expMonth', '$expYear', '$method')";
         
         if (mysqli_query($db->connect, $query)) {
-            echo "Payment information stored securely! Redirecting to main page";
 			echo "<script>
-                setTimeout(function() {
-                    window.location.href = 'index.html'; // Redirect after delay
-                }, 3000); // 3000 milliseconds (3 seconds) delay
+            		alert('Payment information was validated securely! Redirecting to main page');
+                    window.location.href = 'index.html'; // Redirect to main page
+                    
             </script>";
         } else {
             echo "Error storing payment information.";

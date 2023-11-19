@@ -51,7 +51,6 @@ References : https://stackoverflow.com/questions/30378116/access-json-data-from-
                     $.getJSON('https://ipapi.co/'+ip+'/json',function(data){
                         $("#city").text("City : "+data.city);
                         $("#country").text("Country : "+data.country_name);
-                        $("#org").text("Network Provider : "+data.org);
                     });
                 
                     }).delay(1000);
